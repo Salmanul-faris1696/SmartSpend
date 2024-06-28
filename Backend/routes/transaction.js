@@ -1,4 +1,4 @@
-const { addIncome } = require('../controllers/incomeController');
+const {  getIncomes, deleteIncome, addIncome } = require('../controllers/incomeController');
 
 const router = require('express').Router()
 
@@ -7,6 +7,9 @@ const router = require('express').Router()
 // 	res.send("transaction router get ready! ✅");
 // })
 
-router.post('/add-income',addIncome)
+router.post('/add-income', addIncome);
+router.get('/get-incomes', getIncomes);
+router.delete('/delete-income/:id', deleteIncome);
+
 
 module.exports = router;
