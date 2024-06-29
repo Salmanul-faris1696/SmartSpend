@@ -1,7 +1,6 @@
 const expenseSchema = require("../models/expenseModel");
 
 // add expense
-
 exports.addExpense = async (req, res) => {
 	const { title, amount, type, date, category, description } = req.body
 	
@@ -39,7 +38,6 @@ exports.getExpenses = async (req, res) => {
 }
  
 // delete expense
-
 exports.deleteExpense = async (req, res) => {
 	const { id } = req.params;
 	expenseSchema.findByIdAndDelete(id)
